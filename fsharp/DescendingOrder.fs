@@ -1,4 +1,4 @@
-namespace codewars
+namespace CodeWars
 
 module descendingOrder =
     let descendingOrder n =
@@ -8,4 +8,3 @@ module descendingOrder =
             |> Seq.toArray
             |> System.String
             |> int
-

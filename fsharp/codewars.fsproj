@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Include="DescendingOrder.fs" />

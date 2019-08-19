@@ -1,4 +1,4 @@
-﻿namespace codewars
+﻿namespace CodeWars
 
 module SquaresInRect =
     let rec placeSquaresRec (lng: int) (wdth: int) : int list = 

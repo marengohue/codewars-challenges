@@ -1,4 +1,4 @@
-﻿namespace codewars
+﻿namespace CodeWars
 
 module FindOdd =
     let inline findOdd numbers = 
