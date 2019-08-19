@@ -1,5 +1,6 @@
 ﻿namespace CodeWars
 
+// https://www.codewars.com/kata/55466989aeecab5aac00003e
 module SquaresInRect =
     let rec placeSquaresRec (lng: int) (wdth: int) : int list =
         match (lng, wdth) with
