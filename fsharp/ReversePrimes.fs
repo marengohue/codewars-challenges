@@ -2,30 +2,28 @@ namespace CodeWars
 
 // https://www.codewars.com/kata/5539fecef69c483c5a000015
 module ReversePrimes =
-    let strRev a =
-        let rator = System.Globalization.StringInfo.GetTextElementEnumerator(a)
-        List.unfold(fun n->if n then Some(rator.GetTextElement(), rator.MoveNext()) else None)(rator.MoveNext())|>List.rev|>String.concat ""
 
     let reverseNum (n: int64) =
-        n
-            |> string
-            |> strRev
-            |> int64
+        let rec reverse rest reversed =
+            if rest = 0L then reversed
+            else reverse (rest / 10L) (10L * reversed + rest % 10L)
+        reverse n 0L
 
-    let isPrime (n : int64) =
-        let rec loop iterator =
-            if iterator = n/2L then true
-            elif n % iterator = 0L then false
-            else loop (iterator + 1L)
-        loop 2L
+    let rec sieve list =
+        let rec loop list acc = 
+            match list with
+                | [] -> List.rev acc
+                | hd::tl -> loop (List.filter (fun x -> x % hd <> 0L) tl) (hd::acc)
+        loop list []
 
-    let isBrp n =
-        let reversed = n |> reverseNum
-        reversed <> n && isPrime n && isPrime reversed
+    let isBrp n primes nMax =
+        let reversed = reverseNum n
+        reversed <> n && List.contains n primes && List.contains reversed primes
 
     let backwardsPrime (m: int64) (n: int64) =
-        [m .. n]
-            |> List.filter isBrp
+        let primeUpperBound = n |> double |> log10 |> ceil |> int |> pown 10L
+        let primes = [ 2L .. primeUpperBound ] |> sieve
+        primes |> List.filter (fun x -> (x >= m) && (x <= n) && isBrp x primes n) 
 
     // for debugging purposes
     [<EntryPoint>]
