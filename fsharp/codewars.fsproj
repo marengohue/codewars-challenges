@@ -13,6 +13,7 @@
     <Compile Include="FindOdd.fs" />
     <Compile Include="SquaresInRect.fs" />
     <Compile Include="ReversePrimes.fs" />
+    <Compile Include="PassPhrase.fs" />
   </ItemGroup>
 
 </Project>
