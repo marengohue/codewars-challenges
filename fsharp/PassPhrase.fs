@@ -60,8 +60,3 @@ module PassPhrase =
         s
             |> String.mapi (mapCharacters shift)
             |> reverseString
-
-    [<EntryPoint>]
-    let main args =
-        let result = playPass "ABCDE" -1
-        0
