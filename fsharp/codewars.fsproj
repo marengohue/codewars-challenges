@@ -15,6 +15,7 @@
     <Compile Include="ReversePrimes.fs" />
     <Compile Include="PassPhrase.fs" />
     <Compile Include="SumOfParts.fs" />
+    <Compile Include="BuyingCars.fs" />
   </ItemGroup>
 
 </Project>
