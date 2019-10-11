@@ -1,2 +1,5 @@
 # Root ionide folder
 .ionide
+
+# VSCode temp files
+**/.DS_Store

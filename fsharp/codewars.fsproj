@@ -1,13 +1,8 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net461</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System.Runtime" />
-  </ItemGroup>
-
   <ItemGroup>
     <Compile Include="DescendingOrder.fs" />
     <Compile Include="FindOdd.fs" />
@@ -16,6 +11,6 @@
     <Compile Include="PassPhrase.fs" />
     <Compile Include="SumOfParts.fs" />
     <Compile Include="BuyingCars.fs" />
+    <Compile Include="Main.fs" />
   </ItemGroup>
-
 </Project>
