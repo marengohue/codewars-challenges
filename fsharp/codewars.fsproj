@@ -14,6 +14,9 @@
     <Compile Include="BinomialSums.fs" />
     <Compile Include="Persistence.fs" />
     <Compile Include="TddAreas.fs" />
+    <Compile Include="TwiceLinear.fs" />
+    <Compile Include="MagnetsInBoxes.fs" />
+    <Compile Include="SkyscraperSudoku.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
 </Project>
