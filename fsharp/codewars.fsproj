@@ -11,6 +11,9 @@
     <Compile Include="PassPhrase.fs" />
     <Compile Include="SumOfParts.fs" />
     <Compile Include="BuyingCars.fs" />
+    <Compile Include="BinomialSums.fs" />
+    <Compile Include="Persistence.fs" />
+    <Compile Include="TddAreas.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
 </Project>
